@@ -38,6 +38,7 @@ function displayBoard(board) {
   }
 }
 
+/**  */
 async function handleSubmit(evt){
   evt.preventDefault();
   
