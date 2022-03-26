@@ -52,7 +52,7 @@ class BoggleAppTestCase(TestCase):
             self.assertIn(json["gameId"], games)
 
     def test_score_word(self):
-        """Test starting a new game."""
+        """Test checking if a word is on the board or in wordlist."""
 
         with self.client as client:
             response = client.post('/api/new-game')

@@ -33,9 +33,9 @@ def new_game():
 def score_word():
     """ Checks word on board and return JSON {result: ok/not-word/not-on-board} """
     response = request.json
-    game_id = response["gameId"]
-    word = response["word"]
     # breakpoint()
+    game_id = response["gameId"]
+    word = response["word"].upper()
     game = games[game_id]
 
     if not game.is_word_in_word_list(word):
@@ -50,6 +50,3 @@ def score_word():
 
     return jsonify(json)
 
-
-#       def is_word_in_word_list(self, word)
-#     def check_word_on_board(self, word)
